@@ -1,0 +1,10 @@
+.user .user-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.user .user-avatar img {
+  height: 100%;
+  width: 100%;
+}
+/*# sourceMappingURL=user.css.map */
