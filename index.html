@@ -68,6 +68,8 @@
   <link rel="stylesheet" href="./lib/layui/css/layui.css">
   <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="./css/user.css">
+  <link rel="stylesheet" href="./css/search.css">
+  <link rel="stylesheet" href="./css/label.css">
 </head>
 
 <body>
@@ -82,16 +84,15 @@
 <!--  html代码 -->
   <div class="layui-container">
     <div class="layui-row">
-<!--      左边个人信息-->
-      <div class="layui-col-lg3 layui-col-md3 layui-col-cm3 layui-hide-xs user">
+
+      <!--左边-->
+      <div class="layui-col-lg2 layui-col-md2 layui-col-sm2 layui-hide-xs user">
         <!--头像-->
           <div class="avatar">
             <img src="./assets/image/avatar.jpg" alt="头像">
           </div>
           <p>用户名</p>
-
           <hr class="layui-bg-gray">
-
 <!--        用户信息-->
           <div class="layui-row">
             <div class="layui-col-lg4">
@@ -124,23 +125,30 @@
             </div>
           </div>
       </div>
-<!--      右边-->
-      <div class="layui-col-lg9">
-<!--        搜索框-->
+
+      <!--右边-->
+      <div class="layui-col-lg9 layui-col-lg-offset1 layui-col-md9 layui-col-md-offset1 layui-col-sm9 layui-col-sm-offset1 layui-col-xs12">
+        <!--搜索框-->
         <div class="layui-row">
-          <div class="layui-col-lg3">
-            搜索框
+          <div class="layui-col-lg4 layui-col-lg-offset8 layui-col-md4 layui-col-md-offset8 layui-col-sm6 layui-col-sm-offset6 layui-col-xs12">
+              <div class="search">
+                  <input type="text" name="search" value="" maxlength="20" placeholder="请输入文章标题" autocomplete="off">
+                  <i class="layui-icon layui-icon-search"></i>
+              </div>
           </div>
         </div>
-          <!--        主要内容-->
-          <div class="layui-row">
-            <div class="layui-col-lg9 layui-col-md9 layui-col-cm6 layui-col-xs12" style="background-color: blue">
+
+        <!--        主要内容-->
+        <div class="layui-row">
+            <div class="layui-col-lg8 layui-col-md8 layui-col-sm8 layui-col-xs12" style="background-color: blue">
 <!--              //第二步：建立视图。用于呈现渲染结果。-->
               <div id="view"></div>
             </div>
 
-            <div class="layui-col-lg3 layui-col-md3 layui-col-cm3 layui-hide-xs" style="background-color: yellow">
-              右侧标签
+            <div class="layui-col-lg3 layui-col-md3 layui-col-md-offset1 layui-col-sm3 layui-col-sm-offset1 layui-hide-xs">
+              <div class="label" id="tags">
+                  <div id="label_view"></div>
+              </div>
             </div>
           </div>
       </div>
@@ -157,6 +165,19 @@
   <!-- 鼠标特效 -->
   <script src="js/cursor_style.js"></script>
 
+  <!-- 标签随机颜色 -->
+  <script src="js/label.js"></script>
+
+  <!-- 模板 -->
+  <script id="label" type="text/html">
+      <!--    //第一步：编写模版。你可以使用一个script标签存放模板，如：-->
+      <h3>{{ d.title }}</h3>
+      {{#  layui.each(d.list, (index, item) => { }}
+          <span>{{ item }}</span>
+      {{#  }); }}
+  </script>
+
+<!-- 文章模板 -->
   <script id="demo" type="text/html">
 <!--    //第一步：编写模版。你可以使用一个script标签存放模板，如：-->
     <h3>{{ d.title }}</h3>
