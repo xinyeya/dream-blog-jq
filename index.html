@@ -70,6 +70,7 @@
   <link rel="stylesheet" href="./css/user.css">
   <link rel="stylesheet" href="./css/search.css">
   <link rel="stylesheet" href="./css/label.css">
+  <link rel="stylesheet" href="css/articles.css">
 </head>
 
 <body>
@@ -138,9 +139,9 @@
           </div>
         </div>
 
-        <!--        主要内容-->
+        <!--        文章内容-->
         <div class="layui-row">
-            <div class="layui-col-lg8 layui-col-md8 layui-col-sm8 layui-col-xs12" style="background-color: blue">
+            <div class="layui-col-lg8 layui-col-md8 layui-col-sm8 layui-col-xs12">
 <!--              //第二步：建立视图。用于呈现渲染结果。-->
               <div id="view"></div>
             </div>
@@ -168,7 +169,7 @@
   <!-- 标签随机颜色 -->
   <script src="js/label.js"></script>
 
-  <!-- 模板 -->
+  <!-- 标签模板 -->
   <script id="label" type="text/html">
       <!--    //第一步：编写模版。你可以使用一个script标签存放模板，如：-->
       <h3>{{ d.title }}</h3>
@@ -178,37 +179,111 @@
   </script>
 
 <!-- 文章模板 -->
-  <script id="demo" type="text/html">
+  <script id="article" type="text/html">
+      {{#  layui.each(d, (index, item) => { }}
 <!--    //第一步：编写模版。你可以使用一个script标签存放模板，如：-->
-    <h3>{{ d.title }}</h3>
-    <ul>
-      {{#  layui.each(d.list, function(index, item){ }}
-      <li>
-        <span>{{ item.modname }}</span>
-        <span>{{ item.alias }}：</span>
-        <span>{{ item.site || '' }}</span>
-      </li>
+        <div class="articles">
+            <div class="layui-row">
+                {{#  if(item.image !== ''){ }}
+                <div class="layui-col-lg6 layui-col-md6 layui-col-sm6 layui-col-xs12">
+                    <div class="img">
+                        <img src={{ item.image }} alt="">
+                    </div>
+                </div>
+                <div class="layui-col-lg6 layui-col-md6 layui-col-md6 layui-col-xs12">
+                    <div class="text">
+                        <h3>{{ item.title }}</h3>
+                        <p>{{ item.desc }}</p>
+                    </div>
+                    <div class="articles_label">
+                        {{#  layui.each(item.label, (index, item_label) => { }}
+                            <span>{{ item_label }}</span>
+                        {{#  }); }}
+                    </div>
+                    <div class="time">
+                        <i class="layui-icon layui-icon-time"></i>
+                        <span>{{ item.create_time }}</span>
+                    </div>
+                </div>
+                {{#  } else { }}
+                <div class="articles_text">
+                    <div class="text">
+                        <h3>{{ item.title }}</h3>
+                        <p>{{ item.desc }}</p>
+                    </div>
+                    <div class="articles_label">
+                        {{#  layui.each(item.label, (index, item_label) => { }}
+                        <span>{{ item_label }}</span>
+                        {{#  }); }}
+                    </div>
+                    <div class="time">
+                        <i class="layui-icon layui-icon-time"></i>
+                        <span>{{ item.create_time }}</span>
+                    </div>
+                </div>
+                {{#  } }}
+            </div>
+        </div>
       {{#  }); }}
-      {{#  if(d.list.length === 0){ }}
-      无数据
-      {{#  } }}
-    </ul>
+      <div class="page">
+          <div id="demo0"></div>
+      </div>
   </script>
+
+  <!-- 文章内容 -->
   <script>
     layui.use(['jquery','layer', 'laytpl'],function(){
       var $ = layui.$,
               layer = layui.layer;
       laytpl = layui.laytpl;
     });
-    var data = { //数据
-      "title":"Layui常用模块"
-      ,"list":[{"modname":"弹层","alias":"layer","site":"layer.layui.com"},{"modname":"表单","alias":"form"}]
-    }
-    var getTpl = demo.innerHTML
+    var data = [
+        {
+          "title":"文章标题",
+          "desc": '这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介',
+          "image": "https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3544375238,114231233&fm=26&gp=0.jpg",
+          "label": ['标签1', '标签2', '标签3'],
+          "create_time": "2020-5-28 09:46"
+        },
+        {
+            "title":"文章标题",
+            "desc": '这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介',
+            "image": "https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3544375238,114231233&fm=26&gp=0.jpg",
+            "label": ['标签1', '标签2', '标签3'],
+            "create_time": "2020-5-28 09:46"
+        },
+        {
+            "title":"文章标题",
+            "desc": '这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介',
+            "image": "",
+            "label": ['标签1', '标签2', '标签3'],
+            "create_time": "2020-5-28 09:46"
+        },
+        {
+            "title":"文章标题",
+            "desc": '这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介',
+            "image": "https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3544375238,114231233&fm=26&gp=0.jpg",
+            "label": ['标签1', '标签2', '标签3'],
+            "create_time": "2020-5-28 09:46"
+        }
+    ]
+    var getTpl = article.innerHTML
             ,view = document.getElementById('view');
     laytpl(getTpl).render(data, function(html){
       view.innerHTML = html;
     });
+  </script>
+<!-- 分页 -->
+  <script>
+      layui.use(['laypage', 'layer'], function() {
+          var laypage = layui.laypage
+              , layer = layui.layer;
+          //总页数低于页码总数
+          laypage.render({
+              elem: 'demo0'
+              ,count: 50 //数据总数
+          });
+      });
   </script>
 </body>
 

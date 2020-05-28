@@ -3,9 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="f2febcb0-3775-4163-8ad2-f5498d99f593" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/user.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/user.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/user.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/user.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/image/body-background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/label.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/label.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/label.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/label.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/label.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/label.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/label.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/label.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +21,8 @@
       <list>
         <option value="HTML File" />
         <option value="CSS File" />
-        <option value="Less File" />
         <option value="JavaScript File" />
+        <option value="Less File" />
       </list>
     </option>
   </component>
@@ -45,14 +48,14 @@
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xinye\data\Code\kanbanniang-master\assets\image" />
+      <recent name="C:\xinye\data\Code\kanbanniang-master\lib\live2d" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xinye\data\Code\kanbanniang-master\assets\image" />
       <recent name="C:\xinye\data\Code\kanbanniang-master\lib" />
       <recent name="C:\xinye\data\Code\kanbanniang-master\lib\jquery" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xinye\data\Code\kanbanniang-master\assets\image" />
-      <recent name="C:\xinye\data\Code\kanbanniang-master\lib\live2d" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -81,7 +84,10 @@
       <workItem from="1590396783630" duration="364000" />
       <workItem from="1590450191333" duration="6653000" />
       <workItem from="1590456889709" duration="583000" />
-      <workItem from="1590545047080" duration="4361000" />
+      <workItem from="1590545047080" duration="4555000" />
+      <workItem from="1590574814721" duration="122000" />
+      <workItem from="1590588197510" duration="995000" />
+      <workItem from="1590625842198" duration="4960000" />
     </task>
     <servers />
   </component>
