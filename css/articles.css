@@ -6,6 +6,7 @@
   opacity: 0.7;
   border-radius: 5px;
   margin-bottom: 10px;
+  cursor: url(../assets/image/pointer.png), pointer;
 }
 .articles .img {
   width: 100%;
