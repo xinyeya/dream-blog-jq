@@ -3,16 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f2febcb0-3775-4163-8ad2-f5498d99f593" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/image/body-background.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/articles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/articles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/articles.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/articles.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/articles.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/articles.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/label.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/label.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/label.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/label.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/label.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/label.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/user.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/user.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/user.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/user.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -95,7 +85,7 @@
       <workItem from="1590574814721" duration="122000" />
       <workItem from="1590588197510" duration="995000" />
       <workItem from="1590625842198" duration="5294000" />
-      <workItem from="1590712017367" duration="14537000" />
+      <workItem from="1590712017367" duration="14782000" />
     </task>
     <servers />
   </component>
