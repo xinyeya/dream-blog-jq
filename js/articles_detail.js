@@ -1,5 +1,8 @@
 // 获取点击的文章的id
 let detail = () => {
+    $('#view').css('display', 'none')
+    $('#view_Detail').css('display', 'block')
+    $('#about').css('display', 'none')
     let that=event.currentTarget;
     let id = $(that)[0].id
     // console.log($(that)[0].id);
@@ -8,10 +11,7 @@ let detail = () => {
 
 // 获取跳转文章详情页面
 let detailShow = id => {
-    // console.log(id)
-    $('#view')[0].id = 'view_Detail'
     let articleDetail =  $('#articleDetail').html()
-    console.log($('#view_Detail').html(articleDetail))
     detailData()
 }
 

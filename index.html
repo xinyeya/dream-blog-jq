@@ -74,6 +74,7 @@
   <link rel="stylesheet" href="./lib/music/fonts/iconfont.css">
   <link rel="stylesheet" type="text/css" media="screen" href="./lib/music/css/reset.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="./lib/music/css/player.css" />
+  <link rel="stylesheet" href="./css/about.css">
   <link rel="stylesheet" href="./css/base.css">
 </head>
 
@@ -114,19 +115,19 @@
 <!--        导航栏-->
           <div class="layui-nav">
 <!--            文章-->
-            <div class="article">
+            <div class="article" onclick="home()">
                 <p>文章</p>
             </div>
 <!--            微语-->
-            <div class="mcoo">
+            <div class="mcoo" onclick="alert('开发中')">
               <p>微语</p>
             </div>
 <!--            留言-->
-            <div class="content">
+            <div class="content" onclick="alert('开发中')">
               <p>留言</p>
             </div>
 <!--            关于-->
-            <div class="about">
+            <div class="about" onclick="about()">
               <p>关于</p>
             </div>
           </div>
@@ -206,7 +207,9 @@
         <div class="layui-row">
             <div class="layui-col-lg8 layui-col-md8 layui-col-sm8 layui-col-xs12">
 <!--              //第二步：建立视图。用于呈现渲染结果。-->
-              <div id="view"></div>
+              <div style="display: block" id="view"></div>
+              <div style="display: none" id="view_Detail"></div>
+              <div style="display: none" id="about"></div>
             </div>
 
 <!--            标签页面-->
@@ -219,6 +222,8 @@
       </div>
     </div>
   </div>
+
+  <script src="./js/url.js"></script>
 
   <!-- 背景图 -->
   <div id="landlord" style="display: none">
@@ -242,7 +247,7 @@
       {{#  }); }}
   </script>
 
-<!-- 文章模板 -->
+  <!-- 文章模板 -->
   <script id="article" type="text/html">
       {{#  layui.each(d, (index, item) => { }}
 <!--    //第一步：编写模版。你可以使用一个script标签存放模板，如：-->
@@ -294,16 +299,9 @@
       </div>
   </script>
 
-<!--  文章详情内容-->
+  <!--  文章详情内容-->
   <script id="articleDetail" type="text/html">
       <div class="articlesDetail">
-<!--        面包屑导航  -->
-          <div class="layui-row">
-              <span class="layui-breadcrumb">
-                  <a href="">博文</a> >
-                  <a href="">{{ d.title }}</a>
-              </span>
-          </div>
 <!--      文章标题 -->
           <div class="layui-row title">
               <p>{{ d.title }}</p>
@@ -374,7 +372,28 @@
       </div>
   </script>
 
-<!-- 引入配置文件  -->
+  <!--  文章详情内容-->
+  <script id="aboutView" type="text/html">
+      <div class="aboutView">
+          <div class="layui-row">
+              <h2>个人简介</h2>
+          </div>
+          <div class="layui-row">
+              <div class="avatar">
+                  <img src="./assets/image/avatar.jpg" alt="头像">
+              </div>
+          </div>
+          <div class="layui-row">
+              <span class="username">用户名</span>
+              <pre>
+                  00后，金牛座，爱生活，爱书画，爱音乐，爱设计，爱编辑
+                  勤奋是学习的枝叶，当然很苦，智慧是学习的花朵，当然香郁
+              </pre>
+          </div>
+      </div>
+  </script>
+
+  <!-- 引入配置文件  -->
   <script src="./js/config.js"></script>
   <!-- 分页 -->
   <script src="js/pages.js"></script>
@@ -392,8 +411,9 @@
     pages("contents_page", 50)
   </script>
 
+  <script src="./js/about.js"></script>
+  <!-- 音乐播放器 -->
   <script src="./lib/music/js/utill.js"></script>
-  <script src="./lib/music/js/jquery.min.js"></script>
   <script src="./lib/music/js/player.js"></script>
 </body>
 

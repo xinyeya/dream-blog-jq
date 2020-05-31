@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="f2febcb0-3775-4163-8ad2-f5498d99f593" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/base.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/articles.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/articles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/articles_detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/articles_detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/label.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/label.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/music/js/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/music/js/player.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +90,8 @@
       <workItem from="1590574814721" duration="122000" />
       <workItem from="1590588197510" duration="995000" />
       <workItem from="1590625842198" duration="5294000" />
-      <workItem from="1590712017367" duration="14782000" />
+      <workItem from="1590712017367" duration="15138000" />
+      <workItem from="1590881652294" duration="6564000" />
     </task>
     <servers />
   </component>

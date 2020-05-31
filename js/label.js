@@ -14,7 +14,7 @@
             '标签111', '标签2', '标签2424243', "标签4"
         ]
     }
-    let getTpl = label.innerHTML
+    var getTpl = label.innerHTML
         ,view = document.getElementById('label_view');
     laytpl(getTpl).render(data, function(html){
         view.innerHTML = html;

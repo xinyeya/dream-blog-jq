@@ -33,7 +33,7 @@ let data = [
     }
 ]
 
-let getTpl = article.innerHTML
+var getTpl = article.innerHTML
     ,view = document.getElementById('view');
 laytpl(getTpl).render(data, function(html){
     view.innerHTML = html;
